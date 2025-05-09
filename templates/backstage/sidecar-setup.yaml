@@ -5,6 +5,8 @@ containers:
         value: /app-root/config/rcsconfig.yaml
       - name: RHDH_CONFIG_FILE
         value: /app-root/config/sed.edit.RHDH_CONFIG_FILENAME
+      - name: PROJECT
+        value: rhdh
     envFrom:
       - secretRef:
           name: provider-keys
