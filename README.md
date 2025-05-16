@@ -65,13 +65,15 @@ ols_config:
     module: "noop"
   default_provider: dummy
   default_model: dummymodel
-  query_validation_method: disabled
+  query_validation_method: llm
 dev_config:
   enable_dev_ui: false
   disable_auth: false
   disable_tls: true
   enable_system_prompt_override: true
 ```
+
+**query_validation_method** section is recommended to be set as **llm** to enable question validation. If you want to turn off the validation, set to **disabled**
 
 You only need to edit the **llm_providers** section of this file. Due to restrictions by road-core/service we **must** keep the dummy provider defined, as well as having the dummy provider + model as the default.
 
@@ -102,7 +104,7 @@ ols_config:
     module: "noop"
   default_provider: dummy
   default_model: dummymodel
-  query_validation_method: disabled
+  query_validation_method: llm
 dev_config:
   enable_dev_ui: false
   disable_auth: false
@@ -156,13 +158,15 @@ ols_config:
     module: "noop"
   default_provider: dummy
   default_model: dummymodel
-  query_validation_method: disabled
+  query_validation_method: llm
 dev_config:
   enable_dev_ui: false
   disable_auth: false
   disable_tls: true
   enable_system_prompt_override: true
 ```
+
+**query_validation_method** section is recommended to be set as **llm** to enable question validation. If you want to turn off the validation, set this value to **disabled**. Or you can set **questionValidation** in RHDH lightspeed config.
 
 If you intend on only obtaining LLM provider information from your RHDH config you don't need to set anything in `rcsconfig.yaml`. You will however need to *remove* the templated cluster information.
 
@@ -184,7 +188,7 @@ ols_config:
     module: "noop"
   default_provider: dummy
   default_model: dummymodel
-  query_validation_method: disabled
+  query_validation_method: llm
 dev_config:
   enable_dev_ui: false
   disable_auth: false

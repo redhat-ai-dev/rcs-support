@@ -13,7 +13,7 @@ ols_config:
     module: "noop"
   default_provider: dummy
   default_model: dummymodel
-  query_validation_method: disabled
+  query_validation_method: llm
 dev_config:
   enable_dev_ui: false
   disable_auth: false
