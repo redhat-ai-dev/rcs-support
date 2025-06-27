@@ -5,7 +5,7 @@ export PGPASSWORD=
 # [REQUIRED]
 export PGDATABASE=
 # [REQUIRED]
-export HARVESTER_IMAGE=
+export HARVESTER_IMAGE=quay.io/redhat-ai-dev/feedback-harvester:v0.1.0
 # [REQUIRED] Must match the namespace set under $DEPLOYMENT_NAMESPACE in ./env/values
 # This is because we need to add the postgres secret to that namespace for the sidecar to reference login information.
 export RHDH_NAMESPACE=
